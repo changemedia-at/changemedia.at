@@ -1,13 +1,13 @@
 export default {
   MENU: [
-    // {
-    //   name: 'Beiträge',
-    //   path: '/#',
-    // },
-    // {
-    //   name: 'Über Yunite',
-    //   url: 'https://yunite.org',
-    //   target: '_blank',
-    // },
+    {
+      nameIdent: 'changemediaRebranding.header.newsFeed',
+      path: '/',
+    },
+    {
+      nameIdent: 'changemediaRebranding.header.about',
+      url: 'https://changemedia.club',
+      // target: '_blank',
+    },
   ],
 }

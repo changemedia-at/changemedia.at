@@ -19,6 +19,6 @@ export default {
   LOGO_SIGNUP_PATH: '/img/custom/logo-squared-player.svg',
   LOGO_WELCOME_PATH: '/img/custom/logo-squared-player.svg',
   LOGO_LOGOUT_PATH: '/img/custom/logo-squared-player.svg',
-  LOGO_PASSWORD_RESET_PATH: '/img/custom/logo-squared-player.svg',
+  LOGO_PASSWORD_RESET_PATH: '/img/custom/logo-squared.svg',
   LOGO_MAINTENACE_RESET_PATH: '/img/custom/logo-squared.svg',
 }
