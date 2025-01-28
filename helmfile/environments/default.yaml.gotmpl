@@ -1,7 +1,7 @@
 {{ $image_tag := env "IMAGE_TAG" | default  (exec "../scripts/branded_image_tag.sh" (list) | trim) }}
 
-domain: sender-fm-staging.ocelot-social.it4c.org
+domain: changemedia-at-staging.ocelot-social.it4c.org
 redirect_domains: []
-namespace: sender-fm-ocelot
+namespace: changemedia-at-ocelot
 image_tag: {{ $image_tag }}
-github_repository: sender-fm/sender.fm
+github_repository: changemedia-at/changemedia.at

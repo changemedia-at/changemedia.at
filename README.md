@@ -1,16 +1,16 @@
-# Sender.Fm Deploys And Rebrands Ocelot.Social
+# changemedia.at Deploys And Rebrands Ocelot.Social
 
-[![Build Status Publish](https://github.com/sender-fm/Sender-Fm-Ocelot-Social-Deploy-Rebranding/actions/workflows/publish.yml/badge.svg)](https://github.com/Ocelot-Social-Community/Ocelot-Social-Deploy-Rebranding/actions)
-[![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/sender-fm/Sender-Fm-Ocelot-Social-Deploy-Rebranding/blob/LICENSE.md)
+[![Build Status Publish](https://github.com/changemedia-at/changemedia-at-Ocelot-Social-Deploy-Rebranding/actions/workflows/publish.yml/badge.svg)](https://github.com/Ocelot-Social-Community/Ocelot-Social-Deploy-Rebranding/actions)
+[![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/changemedia-at/changemedia-at-Ocelot-Social-Deploy-Rebranding/blob/LICENSE.md)
 [![Discord Channel](https://img.shields.io/discord/489522408076738561.svg)](https://discord.gg/AJSX9DCSUA)
-[![Open Source Helpers](https://www.codetriage.com/sender-fm/sender-fm-deploy-rebranding/badges/users.svg)](https://www.codetriage.com/sender-fm/sender-fm-deploy-rebranding)
+[![Open Source Helpers](https://www.codetriage.com/changemedia-at/changemedia-at-deploy-rebranding/badges/users.svg)](https://www.codetriage.com/changemedia-at/changemedia-at-deploy-rebranding)
 
 This repository is an in use template to rebrand, configure, and deploy [ocelot.social](https://github.com/Ocelot-Social-Community/Ocelot-Social) networks.
 The forked original repository is [Ocelot-Social-Deploy-Rebranding](https://github.com/Ocelot-Social-Community/Ocelot-Social-Deploy-Rebranding).
 
 <!-- markdownlint-disable MD033 -->
 <p align="center">
-  <img src="branding/static/img/custom/logo-squared.svg" alt="sender.fm" width="40%" height="40%">
+  <img src="branding/static/img/custom/logo-squared.svg" alt="changemedia.at" width="40%" height="40%">
 </p>
 <!-- markdownlint-enable MD033 -->
 
