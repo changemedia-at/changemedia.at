@@ -2,10 +2,10 @@
 #{{ $ocelot_image_tag := env "OCELOT_IMAGE_TAG" | default  (exec "../scripts/ocelot_image_tag.sh" (list) | trim) }}
 {{ $image_tag := env "IMAGE_TAG" | default  (exec "../scripts/branded_image_tag.sh" (list) | trim) }}
 
-domain: sender.fm
+domain: changemedia.at
 redirect_domains: | # i don't understand it, but its the way to get it to work: https://stackoverflow.com/a/52840704
-    [ "www.sender.fm"]
-namespace: sender-fm-ocelot-production
+    [ "www.changemedia.at"]
+namespace: changemedia-at-ocelot-production
 #image_tag: {{ env "IMAGE_TAG" | default (printf "ocelot-%s--branded-%s" $ocelot_image_tag $branded_image_tag) }}
 image_tag: {{ $image_tag }}
-github_repository: sender-fm/sender.fm
+github_repository: changemedia-at/changemedia.at

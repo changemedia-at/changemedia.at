@@ -4,6 +4,10 @@ import { defaultPageParamsPages } from '~/components/utils/InternalPages.js'
 
 const ORGANIZATION = defaultPageParamsPages.ORGANIZATION.overwrite({
   // externalLink: null, // if string is defined and not empty it's dominating
+  externalLink: {
+    url: 'https://changemedia.club',
+    target: '',
+  },
 
   internalPage: {
     // footerIdent: 'site.made', // localized string identifier, if undefined default is used
@@ -17,6 +21,10 @@ const ORGANIZATION = defaultPageParamsPages.ORGANIZATION.overwrite({
 })
 const DONATE = defaultPageParamsPages.DONATE.overwrite({
   // externalLink: null, // if string is defined and not empty it's dominating
+  externalLink: {
+    url: 'https://ko-fi.com/changemedia',
+    target: '_blank',
+  },
 
   internalPage: {
     // footerIdent: 'site.donate', // localized string identifier, if undefined default is used
@@ -30,6 +38,10 @@ const DONATE = defaultPageParamsPages.DONATE.overwrite({
 })
 const IMPRINT = defaultPageParamsPages.IMPRINT.overwrite({
   // externalLink: null, // if string is defined and not empty it's dominating
+  externalLink: {
+    url: 'https://changemedia.club/impressum',
+    target: '',
+  },
 
   internalPage: {
     // footerIdent: 'site.imprint', // localized string identifier, if undefined default is used
@@ -95,6 +107,10 @@ const FAQ = defaultPageParamsPages.FAQ.overwrite({
 })
 const SUPPORT = defaultPageParamsPages.SUPPORT.overwrite({
   // externalLink: null, // if string is defined and not empty it's dominating
+  externalLink: {
+    url: 'https://changemedia.club/impressum',
+    target: '',
+  },
 
   internalPage: {
     // footerIdent: 'site.support', // localized string identifier, if undefined default is used

@@ -1,2 +1,8 @@
 {
+  "changemediaRebranding": {
+    "header": {
+      "about": "Club",
+      "newsFeed": "Beiträge"
+    }
+  }
 }

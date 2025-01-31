@@ -1,6 +1,6 @@
 services:
   webapp:
-    image: ghcr.io/sender-fm/sender.fm/webapp
+    image: ghcr.io/changemedia-at/changemedia.at/webapp
     build:
       context: .
       dockerfile: ./docker/webapp.Dockerfile
@@ -18,7 +18,7 @@ services:
       - backend
 
   backend:
-    image: ghcr.io/sender-fm/sender.fm/backend
+    image: ghcr.io/changemedia-at/changemedia.at/backend
     build:
       context: .
       dockerfile: ./docker/backend.Dockerfile
@@ -38,7 +38,7 @@ services:
       - neo4j
 
   maintenance:
-    image: ghcr.io/sender-fm/sender.fm/maintenance
+    image: ghcr.io/changemedia-at/changemedia.at/maintenance
     build:
       context: .
       dockerfile: ./docker/maintenance.Dockerfile
