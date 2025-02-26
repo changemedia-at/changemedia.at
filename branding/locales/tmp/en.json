@@ -2,7 +2,8 @@
   "changemediaRebranding": {
     "header": {
       "about": "Club",
-      "newsFeed": "News Feed"
+      "membershipFeeToolTip": "Annual fee",
+      "newsFeed": "News"
     }
   }
 }
