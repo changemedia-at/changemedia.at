@@ -6,7 +6,7 @@ const ORGANIZATION = defaultPageParamsPages.ORGANIZATION.overwrite({
   // externalLink: null, // if string is defined and not empty it's dominating
   externalLink: {
     url: 'https://changemedia.club',
-    target: '',
+    target: '_blank',
   },
 
   internalPage: {
