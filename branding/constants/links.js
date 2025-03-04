@@ -6,7 +6,7 @@ const ORGANIZATION = defaultPageParamsPages.ORGANIZATION.overwrite({
   // externalLink: null, // if string is defined and not empty it's dominating
   externalLink: {
     url: 'https://changemedia.club',
-    target: '',
+    target: '_blank',
   },
 
   internalPage: {
@@ -81,6 +81,10 @@ const CODE_OF_CONDUCT = defaultPageParamsPages.CODE_OF_CONDUCT.overwrite({
 })
 const DATA_PRIVACY = defaultPageParamsPages.DATA_PRIVACY.overwrite({
   // externalLink: null, // if string is defined and not empty it's dominating
+  externalLink: {
+    url: 'https://changemedia.club/datenschutz',
+    target: '',
+  },
 
   internalPage: {
     // footerIdent: 'site.data-privacy', // localized string identifier, if undefined default is used
@@ -141,7 +145,7 @@ export default {
     ORGANIZATION,
     // TERMS_AND_CONDITIONS,
     // CODE_OF_CONDUCT,
-    // DATA_PRIVACY,
+    DATA_PRIVACY,
     FAQ,
     DONATE,
     IMPRINT,
