@@ -3,27 +3,31 @@ environments:
   default:
     values:
       - ./environments/default.yaml.gotmpl
+    secrets:
+      - ./environments/default.secrets.yaml
   production:
     values:
       - ./environments/production.yaml.gotmpl
+    secrets:
+      - ./environments/production.secrets.yaml
 ---
 repositories:
   - name: ocelot-social
     url: git+https://github.com/Ocelot-Social-Community/Ocelot-Social@deployment/helm/charts
 
 releases:
-  - name: changemedia-at
-    namespace: {{ .StateValues.namespace }}
+  - name: {{ .StateValues.deploy.RELEASE_NAME_OCELOT }}
+    namespace: {{ .StateValues.deploy.NAMESPACE }}
     chart: ocelot-social/ocelot-social
     values:
     - ./values/ocelot.yaml.gotmpl
     secrets:
-    - ./secrets/ocelot.yaml
+    - ./secrets/ocelot.yaml.gotmpl
 
   - name: ocelot-neo4j
-    namespace: {{ .StateValues.namespace }}
+    namespace: {{ .StateValues.deploy.NAMESPACE }}
     chart: ocelot-social/ocelot-neo4j
     values:
     - ./values/ocelot.yaml.gotmpl
     secrets:
-    - ./secrets/ocelot.yaml
+    - ./secrets/ocelot.yaml.gotmpl
