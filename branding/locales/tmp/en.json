@@ -5,5 +5,51 @@
       "membershipFeeToolTip": "Annual fee",
       "newsFeed": "News"
     }
+  },
+  "contribution": {
+    "category": {
+      "description": {
+        "technology": "Developments, Research, Progress, Electronics, AI",
+        "music": "music, singing, bands, live performances, stage performances",
+        "art": "Art",
+        "crafts-trade": "Services, providers, suppliers, employees, jobs",
+        "video": "Films, interviews, documentaries, discussions",
+        "photo": "Images, graphics, equipment, competitions, photographers",
+        "podcast": "Broadcasts, moderation",
+        "sports": "Sports, Equipment",
+        "crypto": "digital currency, cryptography, payment alternatives, monetary systems",
+        "space": "research, extraterrestrial life, UFOs, radiation",
+        "environment": "climate, weather, raw materials, temperature, water",
+        "society": "life, community, social issues, justice",
+        "opinion": "Thoughts, freedom of expression, ideas",
+        "education": "education system, ideology, influence, studies",
+        "travel": "Travel, flights, travel guides, experiences, tips",
+        "books": "Literature, readings, reviews, authors",
+        "search": "Search, find",
+        "offer": "Offer, sell, exchange, give away",
+        "demonstration": "Demonstrations, Dates, Information, Measures"
+      },
+      "name": {
+        "technology": "Technology",
+        "music": "Music",
+        "art": "Art",
+        "crafts-trade": "Crafts/Trade",
+        "video": "Video",
+        "photo": "Photo",
+        "podcast": "Podcast",
+        "sports": "Sports",
+        "crypto": "Bitcoin/Crypto",
+        "space": "Space",
+        "environment": "Environment",
+        "society": "Society",
+        "opinion": "Opinion",
+        "education": "Education",
+        "travel": "Travel",
+        "books": "Books",
+        "search": "Search",
+        "offer": "Offer",
+        "demonstration": "Demonstration"
+      }
+    }
   }
 }

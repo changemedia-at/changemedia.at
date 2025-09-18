@@ -5,5 +5,51 @@
       "membershipFeeToolTip": "Jahresbeitrag",
       "newsFeed": "News"
     }
+  },
+  "contribution": {
+    "category": {
+      "description": {
+        "technology": "Entwicklungen, Forschung, Fortschritt, Elektronik, KI",
+        "music": "Musik, Gesang, Bands, Live, Bühne",
+        "art": "Kunst",
+        "crafts-trade": "Dienstleistung, Anbieter, Lieferanten, Mitarbeiter, Jobs",
+        "video": "Filme, Interviews, Dokumentationen, Diskussionen",
+        "photo": "Bilder, Grafiken, Equipment, Wettbewerbe, Fotograf",
+        "podcast": "Sendungen, Moderation",
+        "sports": "Sport, Equipment",
+        "crypto": "Digitalwährung, Kryptographie, Zahlungsalternativen, Geldsysteme",
+        "space": "Forschung, Außerirdisches Leben, Ufo, Strahlung",
+        "environment": "Klima, Wetter, Rohstoffe, Temperatur, Wasser",
+        "society": "Leben, Gemeinschaft, Soziales, Gerechtigkeit",
+        "opinion": "Gedanken, Meinungsfreiheit, Ideen",
+        "education": "Bildungssystem, Ideologie, Einflußnahme, Studien",
+        "travel": "Reisen, Flüge, Reiseführer, Erfahrungen, Tips",
+        "books": "Literatur, Lesungen, Rezessionen, Autoren",
+        "search": "Suche, finde",
+        "offer": "Biete, verkaufe, tausche, schenke",
+        "demonstration": "Demonstrationen, Termine, Information, Maßnahmen"
+      },
+      "name": {
+        "technology": "Technik",
+        "music": "Musik",
+        "art": "Kunst",
+        "crafts-trade": "Handwerk/Gewerbe",
+        "video": "Video",
+        "photo": "Foto",
+        "podcast": "Podcast/Radio",
+        "sports": "Sport",
+        "crypto": "Bitcoin/Krypto",
+        "space": "Weltraum",
+        "environment": "Umwelt",
+        "society": "Gesellschaft/Soziales",
+        "opinion": "Meinung",
+        "education": "Pädagogik/Bildung",
+        "travel": "Reisen",
+        "books": "Bücher",
+        "search": "Suche",
+        "offer": "Biete",
+        "demonstration": "Demo"
+      }
+    }
   }
 }
