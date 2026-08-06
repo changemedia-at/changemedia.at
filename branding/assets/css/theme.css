@@ -1,0 +1,12 @@
+/*
+ * Runtime theme for this brand: CSS custom properties, authored as CSS.
+ *
+ * This file is the only source for the theme. When packing the archive the build raises the `:root`
+ * selector below to `:root:root`, so these values outrank the framework defaults regardless of load
+ * order, and it reads `--color-primary` out for the PWA/browser-chrome colour. Every property the
+ * framework declares can be set here — the admin lists them under Branding → theme.
+ */
+
+:root {
+  --color-primary: rgb(23, 181, 63);
+}

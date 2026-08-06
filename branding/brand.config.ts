@@ -9,7 +9,7 @@
 // html/ = static page HTML per locale. Paths are ROOT-relative; the multi-brand build namespaces
 // them to /branding/changemedia/… (collision-free).
 //
-// NO custom stylesheet: the brand's colour comes from theme.cssVars below, which applies at RUNTIME.
+// The brand's colour is a `:root` declaration in assets/css/theme.css, applied at RUNTIME.
 // (The empty assets/styles/imports/_branding.scss of the old build-time mechanism was dropped — that
 // overlay is not compiled any more; a brand stylesheet is plain CSS listed in `assets.css`.)
 //
@@ -112,9 +112,6 @@ export default defineBranding({
   },
   theme: {
     // Was metadata.THEME_COLOR — the browser-chrome / PWA colour is now the `color-primary` token.
-    cssVars: {
-      'color-primary': 'rgb(23, 181, 63)',
-    },
   },
   logos: {
     headerPath: 'assets/logo-horizontal.svg',
@@ -172,7 +169,7 @@ export default defineBranding({
     ],
   },
   assets: {
-    css: [],
+    css: ['assets/css/theme.css'],
     html,
     favicon: 'assets/favicon.ico',
   },
