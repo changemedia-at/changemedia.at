@@ -110,6 +110,12 @@ export default defineBranding({
     organizationName: 'changemedia',
     organizationJurisdiction: 'Österreich',
   },
+  post: {
+    // Longer than the framework default (100). Takes effect from the ocelot.social version that
+    // knows `post.*` (Ocelot-Social #10293); older versions ignore it.
+    titleLengthMin: 3,
+    titleLengthMax: 120,
+  },
   theme: {
     // Was metadata.THEME_COLOR — the browser-chrome / PWA colour is now the `color-primary` token.
   },
