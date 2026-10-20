@@ -127,7 +127,7 @@ export default defineBranding({
       iconWidth: '28px',
       iconAltText: 'Kofi Symbol',
       toolTipIdent: 'changemediaRebranding.header.membershipFeeToolTip',
-      url: 'https://ko-fi.com/s/f06bf671ba',
+      url: 'https://ko-fi.com/changemedia',
       target: '_blank',
     },
     menu: [
