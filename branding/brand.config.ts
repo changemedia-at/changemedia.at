@@ -190,4 +190,7 @@ export default defineBranding({
       contribution: categoryLocale('en'),
     },
   },
+  post: {
+    titleLengthMax: 120,
+  },
 })
