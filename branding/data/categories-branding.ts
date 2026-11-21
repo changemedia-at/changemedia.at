@@ -15,9 +15,7 @@
 //
 // Category NAMES/DESCRIPTIONS are not stored here — they come from the i18n idents
 // `contribution.category.name.<slug>` / `.description.<slug>` in brand.config.ts.
-import { getNeode } from '@db/neo4j'
-
-const neode = getNeode()
+import { getDriver } from '@db/neo4j'
 
 const categories = [
   { id: 'cat1', slug: 'networking', name: 'networking', icon: 'networking' },
@@ -57,30 +55,44 @@ const categories = [
   { id: 'books', slug: 'books', name: 'books', icon: 'book' },
   { id: 'search', slug: 'search', name: 'search', icon: 'search' },
   { id: 'offer', slug: 'offer', name: 'offer', icon: 'share' },
-  { id: 'demonstration', slug: 'demonstration', name: 'demonstration', icon: 'bullhorn' }
+  { id: 'demonstration', slug: 'demonstration', name: 'demonstration', icon: 'bullhorn' },
 ]
 
 export default async () => {
-  let dbCategories = (await neode.all('Category', {})).map((node) => node)
-  for await (const category of categories) {
-    const inDB = dbCategories.find((dbItem) => dbItem.properties().id === category.id)
-    if (inDB) {
-      // eslint-disable-next-line no-console
-      console.log('update', category.id)
-      await inDB.update(category)
-      dbCategories = dbCategories.filter((dbItem) => dbItem !== inDB)
-    } else {
-      // eslint-disable-next-line no-console
-      console.log('insert', category.id)
-      await neode.create('Category', category)
-    }
-  }
-  // Anything left is not part of this brand's set — e.g. a leftover from the framework seed. Deleting
-  // it also drops its CATEGORIZED edges, so posts under a stale category lose that assignment; that is
-  // the same trade-off the framework seed makes, and the reason for the warning above.
-  for await (const stale of dbCategories) {
+  const session = getDriver().session()
+  try {
+    const { created, removed } = await session.writeTransaction(async (txc) => {
+      // Anything not in this brand's set goes first — e.g. a leftover from the framework seed — so
+      // a stale category cannot collide with the upsert below on the unique slug. Deleting it also
+      // drops its CATEGORIZED edges, so posts under a stale category lose that assignment; that is
+      // the same trade-off the framework seed makes, and the reason for the warning above.
+      const removal = await txc.run(
+        `MATCH (category:Category)
+         WHERE NOT category.id IN $ids
+         DETACH DELETE category
+         RETURN count(*) AS removed`,
+        { ids: categories.map((category) => category.id) },
+      )
+      const upsert = await txc.run(
+        `UNWIND $categories AS item
+         OPTIONAL MATCH (existing:Category {id: item.id})
+         WITH item, existing IS NULL AS isNew
+         MERGE (category:Category {id: item.id})
+         ON CREATE SET category.createdAt = $now
+         SET category.slug = item.slug, category.name = item.name, category.icon = item.icon
+         RETURN count(CASE WHEN isNew THEN 1 END) AS created`,
+        { categories, now: new Date().toISOString() },
+      )
+      return {
+        created: upsert.records[0].get('created').toNumber(),
+        removed: removal.records[0].get('removed').toNumber(),
+      }
+    })
     // eslint-disable-next-line no-console
-    console.log('delete', stale.properties().id)
-    await stale.delete()
+    console.log(
+      `categories: ${created} inserted, ${categories.length - created} updated, ${removed} deleted`,
+    )
+  } finally {
+    await session.close()
   }
 }

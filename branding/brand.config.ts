@@ -133,7 +133,7 @@ export default defineBranding({
       iconWidth: '28px',
       iconAltText: 'Kofi Symbol',
       toolTipIdent: 'changemediaRebranding.header.membershipFeeToolTip',
-      url: 'https://ko-fi.com/s/f06bf671ba',
+      url: 'https://ko-fi.com/changemedia',
       target: '_blank',
     },
     menu: [
@@ -178,6 +178,9 @@ export default defineBranding({
     css: ['assets/css/theme.css'],
     html,
     favicon: 'assets/favicon.ico',
+    // The square raster icon: apple-touch-icon (iOS home screen) + PWA install icon. Unset, both fall
+    // back to the framework's own file — the vanilla ocelot — on this fully branded instance.
+    icon: 'assets/icon.png',
   },
   locales: {
     de: {
@@ -192,5 +195,8 @@ export default defineBranding({
       },
       contribution: categoryLocale('en'),
     },
+  },
+  post: {
+    titleLengthMax: 120,
   },
 })
