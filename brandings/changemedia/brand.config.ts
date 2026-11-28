@@ -109,6 +109,12 @@ export default defineBranding({
     applicationDescription: 'changemedia.at Network driven by ocelot.social',
     organizationName: 'changemedia',
     organizationJurisdiction: 'Österreich',
+    // Link previews (Discord, WhatsApp, …) render no SVG, so the squared logo cannot stand in: without
+    // a raster image of its own the preview shows the framework's ocelot. Rendered from
+    // assets/logo-squared.svg at 1000x950 with a white margin to 1200x1140 (transparency turns black
+    // in some previews, and the logo reaches the edge of its viewBox).
+    ogImage: 'assets/og-image.png',
+    ogImageAlt: 'changemedia.at Logo',
   },
   theme: {
     // Was metadata.THEME_COLOR — the browser-chrome / PWA colour is now the `color-primary` token.
