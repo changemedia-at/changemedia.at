@@ -10,7 +10,7 @@ The forked original repository is [Ocelot-Social-Deploy-Rebranding](https://gith
 
 <!-- markdownlint-disable MD033 -->
 <p align="center">
-  <img src="branding/static/img/custom/logo-squared.svg" alt="changemedia.at" width="40%" height="40%">
+  <img src="brandings/changemedia/static/img/custom/logo-squared.svg" alt="changemedia.at" width="40%" height="40%">
 </p>
 <!-- markdownlint-enable MD033 -->
 
@@ -47,7 +47,7 @@ Since all deployment methods described here depend on [Docker](https://docker.co
 
 The next step is:
 
-- [Configure And Branding](/branding/README.md)
+- [Configure And Branding](/brandings/changemedia/README.md)
 
 ### Optional: Locally Testing Configuration And Branding
 
